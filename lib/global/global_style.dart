@@ -22,4 +22,17 @@ Widget titleText(String text) {
 
 // Material Button
 
-
+// Text FIeld
+Widget textField(
+    {String? label, TextEditingController? controller, bool? isObscure}) {
+  return TextField(
+    obscureText: isObscure!,
+    controller: controller!,
+    decoration: InputDecoration(
+      label: Text(label!),
+      border: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+    ),
+  );
+}

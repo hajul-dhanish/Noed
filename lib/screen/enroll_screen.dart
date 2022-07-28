@@ -30,8 +30,17 @@ class EnrollIndexingState extends State<EnrollIndexing> {
                 ? Column(
                     children: [
                       titleText("Login"),
-                      const TextField(
-                        decoration: InputDecoration(),
+                      divEach,
+                      textField(
+                        label: "Enter Your Username",
+                        controller: _loginUserName,
+                        isObscure: false,
+                      ),
+                      divEach,
+                      textField(
+                        label: "Enter Your Password",
+                        controller: _loginPassword,
+                        isObscure: true,
                       ),
                       divEach,
                       ElevatedButton(
@@ -52,7 +61,30 @@ class EnrollIndexingState extends State<EnrollIndexing> {
                 : Column(
                     children: [
                       titleText("Register"),
-                      const TextField(),
+                      divEach,
+                      textField(
+                        label: "Enter Your Full Name",
+                        controller: _registerName,
+                        isObscure: false,
+                      ),
+                      divEach,
+                      textField(
+                        label: "Create Username",
+                        controller: _regiseterUserName,
+                        isObscure: false,
+                      ),
+                      divEach,
+                      textField(
+                        label: "Create Password",
+                        controller: _regiseterPassinit,
+                        isObscure: true,
+                      ),
+                      divEach,
+                      textField(
+                        label: "Create Password",
+                        controller: _regiseterPassConfirm,
+                        isObscure: true,
+                      ),
                       divEach,
                       ElevatedButton(
                         onPressed: () {},
